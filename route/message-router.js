@@ -13,15 +13,15 @@ const messageRouter = module.exports = Router();
 
 messageRouter.post('/api/profile/:profileID/message', bearerAuth, jsonParser, function(req, res, next) {
   debug('POST: /api/profile/:profileID/message');
-  console.log('req.params.profileID', req.params.profileID);
+  // console.log('req.params.profileID', req.params.profileID);
 
   Profile.findOne({ userID: req.user._id })
   .then( profile => {
 
-    console.log('in the routes------.', profile);
+    // console.log('in the routes------.', profile);
     req.body.fromProfileID = profile._id;
     req.body.toProfileID = req.params.profileID;
-    console.log('ProfileID:********', req.params.profileID);
+    // console.log('ProfileID:********', req.params.profileID);
     return new Message(req.body).save();
   })
   .then( message => {

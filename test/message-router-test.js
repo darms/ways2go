@@ -116,8 +116,6 @@ describe('Message Routes', function() {
 
   describe('With Valid Request', () => {
     it('should return a message', done =>{
-      console.log('TempProfile2:------------------->', this.tempProfile2);
-      console.log('testMessage:------------------->', testMessage);
       request.post(`${url}/api/profile/${this.tempProfile2._id}/message`)
          .send(testMessage)
          .set({

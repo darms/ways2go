@@ -2,13 +2,13 @@
 
 const expect = require('chai').expect;
 const request = require('superagent');
-//const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const Promise = require('bluebird');
 
 const User = require('../model/user.js');
-//const Message = require('../model/message.js');
 const Profile = require('../model/profile.js');
-const Way = require('../model/way.js');
+const Message = require('../model/message.js');
+
 
 require('../server.js');
 

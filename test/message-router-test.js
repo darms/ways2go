@@ -14,6 +14,8 @@ require('../server.js');
 
 const url = `http://localhost:${process.env.PORT}`;
 
+console.log('message router url',url);
+
 
 const testUser = {
   username: 'tester name',
